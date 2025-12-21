@@ -1,9 +1,9 @@
 #include <stdio.h>
-#include "metrics.h"
+#include "hardware_stats.h"
 #include "utility.h"
 #include <unistd.h>
 
-static void print_stats(SystemStats* s){
+static void print_stats(HardwareStats* s){
 
     double used_memory_in_mb  = (s->mem_total_kb - s->mem_available_kb) / 1024.0;
     double total_memory_in_mb = s->mem_total_kb / 1024.0;
@@ -28,7 +28,7 @@ static void print_stats(SystemStats* s){
 
 
 
-int display_stats_only_terminal(SystemStats* s){
+int display_stats_only_terminal(HardwareStats* s){
 
     while(1){
 

@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include "metrics.h"
+#include "hardware_stats.h"
 
 static unsigned long long previous_total       = 0;
 static unsigned long long previous_idle        = 0;
@@ -202,7 +202,7 @@ static double read_cpu_tempurature_in_celcius(){
 }
 
 
-int read_system_stats(SystemStats *out){
+int read_system_stats(HardwareStats *out){
 
     if(!out) return -1;
     

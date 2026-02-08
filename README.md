@@ -62,7 +62,37 @@ via `sysfs`.
 - Linux /proc File System Documentation
 - Linux sysfs Documentation
 - Raspberry Pi GPIO Documentation
+---
 
-## 🔧 Build & Run
+## Build & Run
 
+### Dependencies 
+- GCC or Clang (C11 support required)
+- CMake >= 3.16
+- libgpiod (GPIO access)
+- pkg-config
+
+### On Debian-based systems:
 ```bash
+sudo apt install cmake pkg-config libgpiod-dev
+```
+### On Arch Linux:
+```bash
+sudo pacman -S cmake pkgconf libgpiod
+```
+### Build
+In root folder of the project
+```bash
+mkdir build
+cd build
+cmake ..
+make
+```
+This will build:
+- A static library containing the hardware monitoring and LCD logic
+- An executable that links this static library and libgpiod library
+
+### Run 
+```bash
+sudo ./hw_monitoring_program
+```

@@ -61,7 +61,8 @@ via `sysfs`.
 
 - Linux /proc File System Documentation
 - Linux sysfs Documentation
-- Raspberry Pi GPIO Documentation
+- Raspberry Pi GPIO Pin Configurations
+- libgpiod Documentation
 ---
 
 ## Build & Run
